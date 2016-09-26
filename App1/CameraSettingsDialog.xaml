@@ -1,0 +1,32 @@
+﻿<ContentDialog Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    x:Class="App1.CameraSettingsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Camera Settings"
+    PrimaryButtonText="OK"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+       <TextBlock  Grid.Row="1" Grid.Column="0"  x:Uid="NewSettingsCamera"  IsColorFontEnabled="True" Text="Camera" />
+       
+       
+       <ComboBox  x:Name="SettingsCamera" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch"  Margin="0,5,0,0" SelectionChanged="SettingsCamera_SelectionChanged"/>
+           
+
+    </Grid>
+
+</ContentDialog>
